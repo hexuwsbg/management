@@ -211,11 +211,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\EmployeeBusinessLayer.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\EmployeeListViewModel.cs" />
     <Compile Include="ViewModels\EmployeeViewModel.cs" />
@@ -292,6 +290,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StorageManagement.Model\StorageManagement.DataAccess.csproj">
+      <Project>{37aaf4e9-f7be-494f-b4cc-529a32cabde0}</Project>
+      <Name>StorageManagement.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StorageManagement.Service\StorageManagement.Service.csproj">
+      <Project>{564B25D9-37C5-421D-BFE6-EB93BC7C86F2}</Project>
+      <Name>StorageManagement.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

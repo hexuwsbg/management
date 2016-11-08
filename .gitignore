@@ -1,2 +1,11 @@
 StorageManagement/.vs/StorageManagement/v14/.suo
 StorageManagement/.vs/config/applicationhost.config
+StorageManagement/StorageManagement.Model/obj/
+StorageManagement/StorageManagement.DB/bin/
+StorageManagement/StorageManagement/bin/
+StorageManagement/StorageManagement.DB/obj/
+StorageManagement/StorageManagement/obj/
+StorageManagement/StorageManagement.Model/bin/Debug/StorageManagement.DataAccess.dll.config
+StorageManagement/StorageManagement.Model/bin/
+StorageManagement/StorageManagement.Service/bin/
+StorageManagement/StorageManagement.Service/obj/

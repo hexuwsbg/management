@@ -1,5 +1,6 @@
 ﻿using StorageManagement.Models;
-using StorageManagement.Services;
+using StorageManagement.Service.Implements;
+using StorageManagement.Service.Interfaces;
 using StorageManagement.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,12 @@ namespace StorageManagement.Controllers
 {
     public class TestController : Controller
     {
+        private IEmployeeService employeeService = new EmployeeServiceImpl();
         // GET: Test
         public ViewResult GetView()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-            EmployeeBusinessLayer service = new EmployeeBusinessLayer();
-            var employees = service.GetEmployees();
+            var employees = employeeService.GetAll();
             var modelList = new List<EmployeeViewModel>();
 
             foreach (var emp in employees)
