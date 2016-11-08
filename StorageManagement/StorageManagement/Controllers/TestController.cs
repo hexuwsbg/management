@@ -1,4 +1,5 @@
-﻿using StorageManagement.Models;
+﻿using StorageManagement.DataAccess.Models;
+using StorageManagement.Models;
 using StorageManagement.Service.Implements;
 using StorageManagement.Service.Interfaces;
 using StorageManagement.ViewModels;
@@ -17,8 +18,14 @@ namespace StorageManagement.Controllers
         public ViewResult GetView()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-            var employees = employeeService.GetAll();
+            //var employees = employeeService.GetAll();
+            var employees = new List<Employee>();
+            var employee = employeeService.GetByID(1);
             var modelList = new List<EmployeeViewModel>();
+            //var employee = new Employee();
+            employee.Salary = 100;
+            //employee.FirstName = "Nick";
+            employeeService.Update(employee);
 
             foreach (var emp in employees)
             {

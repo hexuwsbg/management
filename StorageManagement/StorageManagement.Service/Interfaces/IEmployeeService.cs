@@ -10,5 +10,11 @@ namespace StorageManagement.Service.Interfaces
     public interface IEmployeeService
     {
         List<Employee> GetAll();
+
+        Employee GetByID(int id);
+
+        void Insert(Employee model);
+
+        void Update(Employee model);
     }
 }

@@ -45,12 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implements\BaseDao.cs" />
+    <Compile Include="Implements\EmployeeDao.cs" />
     <Compile Include="Interfaces\IBaseDao.cs" />
     <Compile Include="Interfaces\IFillModel.cs" />
-    <Compile Include="Interfaces\ITableConfig.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableNameConsts.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StorageManagement.DB\StorageManagement.DB.csproj">

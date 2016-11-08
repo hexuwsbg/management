@@ -9,20 +9,13 @@ using System.Threading.Tasks;
 
 namespace StorageManagement.DataAccess.Models
 {
-    public class BaseModel : IFillModel, ITableConfig
+    public class BaseModel : IFillModel
     {
         public BaseModel()
         {
 
         }
-
-        public string TableName {
-            get
-            {
-                return this.GetType().Name;
-            }
-        }
-
+        
         public void FillModel(DataRow dr)
         {
             if (dr != null)

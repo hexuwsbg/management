@@ -11,11 +11,29 @@ namespace StorageManagement.Service.Implements
 {
     public class EmployeeServiceImpl : IEmployeeService
     {
-        private BaseDao<Employee> employeeDao = new BaseDao<Employee>();
+        private EmployeeDao employeeDao = new EmployeeDao();
 
         public List<Employee> GetAll()
         {
             return employeeDao.GetAll();
+        }
+
+        public Employee GetByID(int id)
+        {
+            var list = employeeDao.GetByField("ID", id);
+            if (list.Count == 0)
+                return null;
+            return list[0];
+        }
+
+        public void Insert(Employee model)
+        {
+            employeeDao.Insert(model);
+        }
+
+        public void Update(Employee model)
+        {
+            employeeDao.Update(model);
         }
     }
 }

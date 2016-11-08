@@ -8,7 +8,7 @@ namespace StorageManagement.DataAccess.Models
 {
     public class Employee : BaseModel
     {
-        public int ID { set; get; }
+        public int? ID { set; get; }
         public string FirstName { set; get; }
         public string LastName { set; get; }
         public int Salary { set; get; }
